@@ -159,3 +159,43 @@ fieldset legend {
 .col-3 > div:nth-child(1) {
   width: 100%;
 }
+
+.checkbox-wrapper {
+  position: relative;
+}
+
+.checkbox-wrapper label {
+  font-size: 14px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  color: #4e4958;
+}
+
+.checkbox-wrapper input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+
+  opacity: 0;
+}
+
+.checkbox-wrapper label::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  border: 1px solid #e6e6f0;
+  border-radius: 8px;
+}
+
+.checkbox-wrapper input:checked + label::before {
+  background-image: url(./images/check.svg);
+}
+
+.checkbox-wrapper input:focus + label::before {
+  outline: 2px solid black;
+}
